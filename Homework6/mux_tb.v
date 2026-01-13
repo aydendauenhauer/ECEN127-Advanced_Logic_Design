@@ -1,0 +1,50 @@
+module tb_mux;
+    reg [4:0] select;
+    reg [31:0] data_in;
+    wire data_out;
+
+    mux dut(select, data_in, data_out);
+    initial begin
+        $display("Start of the muxtiplexer test");
+        $monitor("select=%b, data_in=%b, data_out=%b @ %d", select, data_in, data_out, $time);
+        select  = 0;
+        data_in = 32'h0000_0000;
+        $display("Test 1: all zeros");
+        select = 0; data_in = 32'h00000000;
+        #10;
+        select = 5;
+        #10;
+        select = 10;
+        #10;
+        select = 31;
+        #10;
+        $display("Test 2: all ones");
+        select = 0; data_in = 32'hFFFFFFFF;
+        #10;
+        select = 7;
+        #10;
+        select = 16;
+        #10;
+        select = 31;
+        #10;
+        $display("Test 3: alternating bits");
+        select = 0; data_in = 32'hA5A55A5A;
+        #10;
+        select = 3;
+        #10;
+        select = 12;
+        #10;
+        select = 25;
+        #10;
+        $display("Test 4: random");
+        select = 0; data_in = 32'h01234567;
+        #10;
+        select = 4;
+        #10;
+        select = 17;
+        #10;
+        select = 29;
+        #10;
+        $finish;
+    end
+endmodule

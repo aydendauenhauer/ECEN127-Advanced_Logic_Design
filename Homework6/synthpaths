@@ -1,0 +1,2 @@
+set link_library {*    lsi_10k.db dw_foundation.sldb}
+set target_library {lsi_10k.db}
