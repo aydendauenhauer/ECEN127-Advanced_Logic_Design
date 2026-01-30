@@ -1,0 +1,1 @@
+This repository contains my Lab 2 project for ECEN 127, where I implemented and tested a 4-bit adder in Verilog and verified its behavior using BCD-focused testbenches. The lab uses the adder4 module as a basic arithmetic building block and drives it with a range of input patterns in bcd_tb and bcd_tb2 to check correct sum and carry outputs for decimal digit addition.
