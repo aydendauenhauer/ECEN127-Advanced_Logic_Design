@@ -1,0 +1,1 @@
+This repository contains my Homework 5 for ECEN 127, where I implemented and tested a ROM memory module in Verilog. A Python script generates the memory initialization file (data.mem), which is read by the ROM, and a Verilog testbench drives addresses, monitors outputs, and verifies that the stored data is returned correctly.
