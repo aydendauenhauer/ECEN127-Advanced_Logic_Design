@@ -1,0 +1,1 @@
+This repository contains my Lab 3 project for ECEN 127, where I implemented a load-enable register and used it to build a small multi-register file in Verilog. A dedicated testbench applies reset, write, and read cycles to verify correct data storage, simultaneous reads, and that disabled writes do not modify register contents.
